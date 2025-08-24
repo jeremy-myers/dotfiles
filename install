@@ -32,6 +32,7 @@ dotfiles=(
 	tmux.conf
 	vimrc
 	vim
+	zshrc
 )
 # i've become famous - whoops. because of this, people like to install my
 # dotfiles without customizing them so then they get my git config and "become"
@@ -221,8 +222,8 @@ if defaults read com.apple.finder &>/dev/null; then
 	defaults write com.googlecode.iTerm2 EnterCopyModeAutomatically -bool no
 
 	# Spotlight: Don't index mounted volumes
-	echo 'sudo needed to update spotlight settings'
-	sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array /Volumes
+	# echo 'sudo needed to update spotlight settings'
+	# sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array /Volumes
 
 	echo 'done: killing Dock and Finder'
 	killall Dock Finder
