@@ -375,3 +375,4 @@ untiny() {
 path_clean
 
 true
+. "$HOME/.cargo/env"

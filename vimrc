@@ -101,12 +101,31 @@ Plug 'vim-python/python-syntax'
 " Rust
 Plug 'rust-lang/rust.vim'
 
+" vim language server protocol
+" must register languages below
+Plug 'prabirshrestha/vim-lsp'
+
 call plug#end()
 
 syntax enable
 filetype plugin indent on
 
+" -----------------------------------------------------------------------------
+" Language settings
+" -----------------------------------------------------------------------------
+" Ruff
+if executable('ruff')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'ruff',
+        \ 'cmd': {server_info->['ruff', 'server']},
+        \ 'allowlist': ['python'],
+        \ 'workspace_config': {},
+        \ })
+endif
+
+" Rust
 let g:rustfmt_autosave = 1
+
 " -----------------------------------------------------------------------------
 " Color settings
 " -----------------------------------------------------------------------------

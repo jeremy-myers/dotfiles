@@ -97,6 +97,10 @@ alias ll='ls -lha'
 alias pu='pushd'
 alias po='popd'
 alias dc='dirs -c'
+alias uvp='uv pip install'
+alias dx='deactivate'
+alias vim='nvim'
+
 grep --color=auto < /dev/null &>/dev/null && alias grep='grep --color=auto'
 xdg-open --version &>/dev/null && alias open='xdg-open'
 
@@ -145,3 +149,4 @@ export PATH="/usr/local/bin:${PATH}"
 export PATH="/usr/local/sbin:$PATH"
 
 . "$HOME/.local/bin/env"
+. "$HOME/.cargo/env"
