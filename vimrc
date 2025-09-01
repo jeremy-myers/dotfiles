@@ -114,6 +114,7 @@ filetype plugin indent on
 " Language settings
 " -----------------------------------------------------------------------------
 " Ruff
+" Not currently used
 if executable('ruff')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'ruff',
